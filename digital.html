@@ -14,7 +14,7 @@
             <span class="material-icons material-icons-outlined">
                 menu
             </span>
-            <section class="menu__overlay bg__color--333">
+            <section class="hidden menu__overlay bg__color--333">
                 <ul class="menu__list flex column">  
                     <li class="list__item">Analaog timer</li>
                     <li class="list__item">Digital timer</li>
@@ -24,31 +24,11 @@
                 </ul>
             </section>
         </nav>
+        <h3>interval</h3>
     </header>
-    <main class="flex column">
-        <section class="flex " id="set-time">
-            <span class="arrow--back material-icons material-icons-outlined" id="less-time">
-                arrow_back_ios
-            </span>
-            <section class="choose-time flex">
-                <h2 class="time">10</h2>
-                <p>minutes</p>
-            </section>
-            <span class="arrow--forward material-icons material-icons-outlined" id="more-time">
-                arrow_forward_ios
-            </span>
-        </section>
-        <div>
-            <input type="checkbox" name="intervals" id="intervals">
-            <label for="intervals">intervals</label>
-        </div>
-        <div>
-            <input type="checkbox" name="break/interval" id="break">
-            <label for="break">5 min break / interval</label>
-        </div>
-        <button class="start-timer" id="start-btn">START TIMER</button>
-
-        
+    <main>
+        <h1 class="digital-timer">7:32</h1>
+        <button class="start-timer" id="start-btn">Abort timer</button>
     </main>
 
     <script type="module" src="JS/script.js"></script>
