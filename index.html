@@ -4,36 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="CSS/style.css">
     <title>Mighty Gardeners</title>
 </head>
 <body>
-    <header class="menu__bar">
+    <header class="flex menu__bar">
         <nav>
             <span class="material-icons material-icons-outlined">
                 menu
             </span>
-            <section class="menu__overlay bg-color333">
-                <ul>  <!--link in js-->
-                    <li class="menu__item">Analaog timer</li>
-                    <li class="menu__item">Digital timer</li>
-                    <li class="menu__item">Visual timer</li>
-                    <li class="menu__item">Text timer</li>
-                    <li class="menu__item">Circles timer</li>
+            <section class="menu__overlay bg__color--333">
+                <ul class="menu__list flex column">  
+                    <li class="list__item">Analaog timer</li>
+                    <li class="list__item">Digital timer</li>
+                    <li class="list__item">Visual timer</li>
+                    <li class="list__item">Text timer</li>
+                    <li class="list__item">Circles timer</li>
                 </ul>
             </section>
         </nav>
     </header>
-    <main class="flex--column">
-        <section id="set-time">
-            <span class="arrow--back material-icons material-icons-outlined">
+    <main class="flex column">
+        <section class="flex " id="set-time">
+            <span class="arrow--back material-icons material-icons-outlined" id="less-time">
                 arrow_back_ios
             </span>
-            <section>
+            <section class="choose-time flex">
                 <h2 class="time">10</h2>
                 <p>minutes</p>
             </section>
-            <span class="arrow--forward material-icons material-icons-outlined">
+            <span class="arrow--forward material-icons material-icons-outlined" id="more-time">
                 arrow_forward_ios
             </span>
         </section>
