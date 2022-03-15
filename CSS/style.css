@@ -62,6 +62,9 @@ main {
 .flex, .show {
     display: flex;
 }
+.hidden {
+    display: none;
+}
 .column {
     flex-direction: column;
 }
