@@ -4,54 +4,59 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="CSS/style.css">
     <title>Mighty Gardeners</title>
 </head>
 <body>
-    <header class="flex menu__bar">
-        <nav>
-            <span class="menu__btn material-icons material-icons-outlined" id="menu-btn">
-                menu
-            </span>
-            <section class="menu__overlay bg-color--dark-grey" id="menu">
-                <span class="menu__btn menu--open material-icons material-icons-outlined" id="menu-btn">
+    <div class="wrapper">
+        <header class="flex menu__bar">
+            <nav>
+                <span class="menu__btn material-icons material-icons-outlined" id="open-menu">
                     menu
                 </span>
-                <ul class="menu__list flex column">  
-                    <li class="list__item">Analaog timer</li>
-                    <li class="list__item">Digital timer</li>
-                    <li class="list__item">Visual timer</li>
-                    <li class="list__item">Text timer</li>
-                    <li class="list__item">Circles timer</li>
-                </ul>
+                <section class="menu__overlay bg-color--dark-grey" id="menu">
+                    <span class="menu__btn menu--open material-icons material-icons-outlined" id="close-menu">
+                        menu
+                    </span>
+                    <ul class="menu__list flex column">  
+                        <li class="list__item">Analaog timer</li>
+                        <li class="list__item">Digital timer</li>
+                        <li class="list__item">Visual timer</li>
+                        <li class="list__item">Text timer</li>
+                        <li class="list__item">Circles timer</li>
+                    </ul>
+                </section>
+            </nav>
+        </header>
+        <main class="flex column">
+            <section class="set__time" id="set-time">
+                <span class="less-time material-icons material-icons-outlined" id="less-time">
+                    arrow_back_ios
+                </span>
+                <section class="choose-time">
+                    <p class="time">10</p>
+                    <p class="minutes">minutes</p>
+                </section>
+                <span class="more-time material-icons material-icons-outlined" id="more-time">
+                    arrow_forward_ios
+                </span>
             </section>
-        </nav>
-    </header>
-    <main class="flex column">
-        <section class="flex" id="set-time">
-            <span class="arrow--back material-icons material-icons-outlined" id="less-time">
-                arrow_back_ios
-            </span>
-            <section class="choose-time flex">
-                <h2 class="font__size--3rem time">10</h2>
-                <p>minutes</p>
+            <section class="set-interval">
+                <div>
+                    <input type="checkbox" name="intervals" id="intervals">
+                    <label for="intervals">intervals</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="break/interval" id="break">
+                    <label for="break">5 min break / interval</label>
+                </div>
             </section>
-            <span class="arrow--forward material-icons material-icons-outlined" id="more-time">
-                arrow_forward_ios
-            </span>
-        </section>
-        <div>
-            <input type="checkbox" name="intervals" id="intervals">
-            <label for="intervals">intervals</label>
-        </div>
-        <div>
-            <input type="checkbox" name="break/interval" id="break">
-            <label for="break">5 min break / interval</label>
-        </div>
-        <button class="start-timer" id="start-btn">START TIMER</button>
-    </main>
-
+            <button class="start-timer" id="start-btn">START TIMER</button>
+        </main>
+    </div>
+    <script src="JS/modules/analouge-overlay.js"></script>
     <script type="module" src="JS/script.js"></script>
 </body>
 </html>

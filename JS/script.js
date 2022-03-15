@@ -1,8 +1,12 @@
 const menuElem = document.querySelector('#menu')
 
-const MENUBTN = document.querySelector('#menu-btn');
+const openMenu = document.querySelector('#open-menu');
+const closeMenu = document.querySelector('#close-menu')
 
-MENUBTN.addEventListener('click', ()=> {
+
+openMenu.addEventListener('click', ()=> {
     menuElem.classList.toggle('show')
-    MENUBTN.classList.toggle('menu__btn--open')
+})
+closeMenu.addEventListener('click', ()=> {
+    menuElem.classList.toggle('show')
 })

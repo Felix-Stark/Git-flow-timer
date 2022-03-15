@@ -1,18 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
 body {
     width: 100vw;
     height: 100vh;
     margin: 0px;
 }
 
+.wrapper {
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 
 .menu__bar {
     margin: 0px;
     height: 2.5rem;
 }
 .menu__btn {
-    margin: .5rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 1rem;
     font-size: 2rem;
-
 }
 .menu--open {
     position: fixed;
@@ -20,6 +32,7 @@ body {
     left: 0px;
     color: #ffe;
 }
+
 .menu__overlay {
     width: 100%;
     height: 100%;
@@ -42,16 +55,45 @@ body {
 }
 
 main {
-    width: 100%;
-    height: 100%;
-    justify-content: space-around;
+    height: 65%;
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-evenly;
 }
-
-
-/* FONT */
-.font__size--3rem {
+.set__time {
+    display: flex;
+    gap: 2rem;
+}
+.less-time, .more-time {
+    margin-top: .7rem;
     font-size: 3rem;
 }
+.choose-time {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.time {
+    margin: 0px;
+    font-size: 4rem;
+}
+.choose-time p {
+    font-family: 'Roboto';
+    margin: 0px;
+}
+.set-interval {
+    width: 100%;
+}
+.set-interval label {
+    font-size: 1rem;
+    font-family: 'Roboto';
+}
+.start-timer {
+    padding: 1rem 1.5rem;
+}
+
+/* FONT */
 
 /* BACKGROUND */
 .bg-color--dark-grey {
