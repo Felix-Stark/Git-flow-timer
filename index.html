@@ -11,10 +11,13 @@
 <body>
     <header class="flex menu__bar">
         <nav>
-            <span class="material-icons material-icons-outlined">
+            <span class="menu__btn material-icons material-icons-outlined" id="menu-btn">
                 menu
             </span>
-            <section class="menu__overlay bg__color--333">
+            <section class="menu__overlay bg-color--dark-grey" id="menu">
+                <span class="menu__btn menu--open material-icons material-icons-outlined" id="menu-btn">
+                    menu
+                </span>
                 <ul class="menu__list flex column">  
                     <li class="list__item">Analaog timer</li>
                     <li class="list__item">Digital timer</li>
@@ -26,12 +29,12 @@
         </nav>
     </header>
     <main class="flex column">
-        <section class="flex " id="set-time">
+        <section class="flex" id="set-time">
             <span class="arrow--back material-icons material-icons-outlined" id="less-time">
                 arrow_back_ios
             </span>
             <section class="choose-time flex">
-                <h2 class="time">10</h2>
+                <h2 class="font__size--3rem time">10</h2>
                 <p>minutes</p>
             </section>
             <span class="arrow--forward material-icons material-icons-outlined" id="more-time">
