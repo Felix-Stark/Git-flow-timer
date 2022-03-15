@@ -21,6 +21,6 @@ function digitalClock() {
 </header>
 <main>
     <h1 class="digital-timer">7:32</h1>
-    <button class="start-timer" id="start-btn">Abort timer</button>
+    <button class="button">Abort timer</button>
 </main>`
 }
