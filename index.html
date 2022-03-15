@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">
+    <title>Mighty Gardeners</title>
+</head>
+<body>
+    <header class="menu__bar">
+        <nav>
+            <span class="material-icons material-icons-outlined">
+                menu
+            </span>
+            <section class="menu__overlay bg-color333">
+                <ul>  <!--link in js-->
+                    <li class="menu__item">Analaog timer</li>
+                    <li class="menu__item">Digital timer</li>
+                    <li class="menu__item">Visual timer</li>
+                    <li class="menu__item">Text timer</li>
+                    <li class="menu__item">Circles timer</li>
+                </ul>
+            </section>
+        </nav>
+    </header>
+    <main class="flex--column">
+        <section id="set-time">
+            <span class="arrow--back material-icons material-icons-outlined">
+                arrow_back_ios
+            </span>
+            <section>
+                <h2 class="time">10</h2>
+                <p>minutes</p>
+            </section>
+            <span class="arrow--forward material-icons material-icons-outlined">
+                arrow_forward_ios
+            </span>
+        </section>
+        <div>
+            <input type="checkbox" name="intervals" id="intervals">
+            <label for="intervals">intervals</label>
+        </div>
+        <div>
+            <input type="checkbox" name="break/interval" id="break">
+            <label for="break">5 min break / interval</label>
+        </div>
+        <button class="start-timer" id="start-btn">START TIMER</button>
+    </main>
+
+    <script type="module" src="JS/script.js"></script>
+</body>
+</html>
