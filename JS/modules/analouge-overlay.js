@@ -9,6 +9,6 @@ export function addClockToHTML () {
             <div class="second"></div>
             <div class="minute"></div>
         </div>
-        <button class="button">Abort timer</button>
+        <button class="button abort-btn">Abort timer</button>
     </main>`;
 }
