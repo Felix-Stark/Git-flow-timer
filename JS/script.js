@@ -1,6 +1,7 @@
 
 import { showLoadingOverlay } from "./modules/loading-overlay.js";
 import { showMenuOptions } from "./modules/menu.js";
+import { digitalClock } from "./modules/digital.js";
 
 const menuElem = document.querySelector('#menu');
 const openMenu = document.querySelector('#open-menu');
@@ -32,17 +33,20 @@ function startTimer (setTime){
 Den behöver*/
 
 /* Vad är det han skrivit i general om easyTimer??? Är det något vi ska använda kanske? */
-    let currentTime = setTime;
+    let currentTime = setTime * 60;
     let timer = setInterval(() => {
         // Check if time left
         if(currentTime >= 0) {
            // Update timer in gui
            console.log(currentTime);
+           digitalClock(currentTime, currentTime%60)
            // count down current time
            currentTime--;
        } else {
         //    gameOver(timer, gameLoop)
-        console.log('times up')
+        console.log('times up');
+        clearInterval(timer);
+        //anropa en times-up overlay
        }
     }, 1000);
 }

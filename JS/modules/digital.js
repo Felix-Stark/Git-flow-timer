@@ -1,9 +1,11 @@
 const mainElem = document.querySelector('main');
 
-export function digitalClock() {
+
+export function digitalClock(minutes, seconds) {
     mainElem.innerHTML = `
-        <main>
-            <h1 class="digital-timer">7:32</h1>
-            <button class="button">Abort timer</button>
-        </main>`
+        <div class="digital-timer">
+            <h1 class="minutes">${minutes}:</h1>
+            <h1 class="seconds">${seconds}</h1>
+        </div>
+            <button class="button abort-btn">Abort timer</button>`;
 }
