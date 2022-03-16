@@ -3,7 +3,12 @@ const mainElem = document.querySelector('main');
 addClockToHTML();
 
 function addClockToHTML () {
+
+    bodyElem.innerHTML = `
+
+
     mainElem.innerHTML = `
+
     <header class="flex menu__bar">
         <nav>
             <span class="material-icons material-icons-outlined">
@@ -20,6 +25,7 @@ function addClockToHTML () {
             </section>
         </nav>
     </header>
+
     <main class="flex column">
         <div class="clock">
             <div class="dot"></div>
