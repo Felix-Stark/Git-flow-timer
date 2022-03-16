@@ -1,16 +1,21 @@
-import { digitalClock } from "../JS/digital.js";
+import { digitalClock } from "./modules/digital.js";
 import { addClockToHTML } from "./modules/analouge-overlay.js";
+import { showLoadingOverlay } from "./modules/loading-overlay.js";
 
 
 const menuElem = document.querySelector('#menu')
 const digitalElem = document.querySelector('#digital')
-const analogElem = document.querySelector('#analog')
+// const analogElem = document.querySelector('#analog')
 
 const openMenu = document.querySelector('#open-menu');
 const closeMenu = document.querySelector('#close-menu')
-const lessTime = document.querySelector('#less-time')
-const moreTime = document.querySelector('#more-time')
+// const lessTime = document.querySelector('#less-time')
+// const moreTime = document.querySelector('#more-time')
 const startBtn = document.querySelector('#start-btn')
+
+
+/* function som visar loading-overlay i x antal sekunder innan set time-vyn visas.   */
+showLoadingOverlay();
 
 openMenu.addEventListener('click', ()=> {
     menuElem.classList.toggle('show')
@@ -23,8 +28,8 @@ digitalElem.addEventListener('click', () => {
     digitalClock()
 })
 
-startBtn.addEventListener('click', () => {
-    console.log('hallo')
-    addClockToHTML()
-})
+// startBtn.addEventListener('click', () => {
+//     console.log('hallo')
+//     addClockToHTML()
+// })
 
