@@ -1,7 +1,4 @@
-
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
 
 * {
     box-sizing: border-box;
@@ -13,6 +10,7 @@ body {
     width: 100vw;
     height: 100vh;
     margin: 0px;
+    background-color: #EEE;
 }
 main {
     display: flex;
@@ -30,6 +28,9 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+label, h1, h2, h3, p {
+    font-family: 'PT Sans', sans-serif;
 }
 
 /* Drop down menu */
@@ -78,11 +79,12 @@ main {
 .menu__item {
     color: #ffe;
     font-size: 2rem;
-    font-family: 'PT Sans', sans-serif;
     cursor: pointer;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     line-height: 31px;
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 700;
 }
 
 
@@ -92,9 +94,11 @@ main {
     gap: 2rem;
 }
 .less-time, .more-time {
-    margin-top: .7rem;
-    font-size: 3rem;
+    margin-top: 1rem;
+    font-size: 2.5rem;
+    
 }
+
 .choose-time {
     display: flex;
     flex-direction: column;
@@ -104,22 +108,30 @@ main {
 .interval-time {
     margin: 0px;
     font-size: 4rem;
+    font-weight: 700;
 }
 .choose-time p {
-    font-family: 'Roboto';
     margin: 0px;
 }
 .set-interval {
-    width: 100%;
     display: flex;
     flex-direction: column;
 }
 .set-interval label {
     font-size: 1rem;
-    font-family: 'Roboto';
+    letter-spacing: 0.1em;
+    line-height: 26px;
 }
 .start-timer {
-    padding: 1rem 1.5rem;
+    padding: 1rem 4rem;
+    border: 2px solid #222222;
+    border-radius: 5px;
+    background-color: #EEE;
+    font-family: 'PT Sans', sans-serif;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: 700;
 }
 
 
@@ -141,7 +153,6 @@ main {
     height: 20px;
     width: 20px;
     background-color: #555;
-    /* border: 3px solid #000; */
     outline: 7px solid #000;
     border-radius: 100%;
     z-index: 3;
