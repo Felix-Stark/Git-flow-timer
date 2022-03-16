@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
 
+* {
+    box-sizing: border-box;
+    /* outline: 1px solid red; */
+}
+
 body {
     width: 100vw;
     height: 100vh;
@@ -38,6 +43,7 @@ body {
     height: 100%;
     position: absolute;
     top: 0px;
+    left: 0px;
     display: none;
     justify-content: center;
     align-items: center;
