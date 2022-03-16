@@ -18,6 +18,7 @@ const startBtn = document.querySelector('#start-btn')
 showLoadingOverlay();
 
 openMenu.addEventListener('click', ()=> {
+    console.log("open");
     menuElem.classList.toggle('show')
 })
 closeMenu.addEventListener('click', ()=> {
