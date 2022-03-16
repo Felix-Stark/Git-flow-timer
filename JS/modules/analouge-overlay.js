@@ -1,9 +1,13 @@
-const bodyElem = document.querySelector('body');
+const mainElem = document.querySelector('main');
 
 addClockToHTML();
 
 function addClockToHTML () {
+
     bodyElem.innerHTML = `
+
+
+    mainElem.innerHTML = `
 
     <header class="flex menu__bar">
         <nav>

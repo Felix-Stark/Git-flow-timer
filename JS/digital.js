@@ -1,7 +1,7 @@
-const bodyElem = document.querySelector('body');
+const mainElem = document.querySelector('main');
 
 function digitalClock() {
-    bodyElem.innerHTML = `
+    mainElem.innerHTML = `
     <header class="flex menu__bar">
     <nav>
         <span class="material-icons material-icons-outlined">
