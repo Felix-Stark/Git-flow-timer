@@ -3,6 +3,8 @@ const mainElem = document.querySelector('main')
 const lessTime = document.querySelector('#less-time')
 const moreTime = document.querySelector('#more-time')
 
+let setTime = 10;
+
 export function showSetTime() {
     mainElem.innerHTML = `
         <section class="set__time" id="set-time">
@@ -10,7 +12,7 @@ export function showSetTime() {
                 arrow_back_ios
             </span>
             <section class="choose-time">
-                <p class="interval-time" id="time">10</p>
+                <p class="interval-time" id="time">${setTime}</p>
                 <p class="minutes">minutes</p>
             </section>
             <span class="more-time material-icons material-icons-outlined" id="more-time">
