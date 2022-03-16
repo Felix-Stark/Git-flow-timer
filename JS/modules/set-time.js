@@ -1,3 +1,5 @@
+import { activateStartTimerButton } from "../script.js";
+
 const mainElem = document.querySelector('main')
 
 let setTime = 10;
@@ -28,10 +30,11 @@ export function showSetTime() {
                 <label for="break">5 min break / interval</label>
             </div>
         </section>
-        <button class="start-timer" id="start-btn">START TIMER</button> `;
+        <button class="start-timer" id="start-btn">Start timer</button> `;
         let lessTime = document.querySelector('#less-time');
         let moreTime = document.querySelector('#more-time');
         changeTimer(lessTime, moreTime);
+        activateStartTimerButton(setTime);
 };
 
 function changeTimer (lessTime, moreTime) {
@@ -45,5 +48,6 @@ function changeTimer (lessTime, moreTime) {
         setTime = setTime + 1;
         showSetTime();
     });
+    
 }
 
