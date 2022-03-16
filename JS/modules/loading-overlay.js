@@ -7,15 +7,10 @@ export function showLoadingOverlay () {
     <section class="loading-overlay">
         <img src="/assets/logo.svg" alt="logo">
         <h3>For all your timing needs</h3>
-    </section>
-    `;
-
+    </section>`;
 }
 
-
 export function hideLoadingOverlay () {
-    /* insert main html here*/
-    console.log("3y");
     showSetTime();
 }
 

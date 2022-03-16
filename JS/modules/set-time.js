@@ -1,10 +1,9 @@
 const mainElem = document.querySelector('main')
 
-
-
-
 let setTime = 10;
+
 showSetTime();
+
 export function showSetTime() {
     mainElem.innerHTML = `
         <section class="set__time" id="set-time">
@@ -31,13 +30,11 @@ export function showSetTime() {
         </section>
         <button class="start-timer" id="start-btn">START TIMER</button> `;
         let lessTime = document.querySelector('#less-time');
-        console.log(lessTime);
         let moreTime = document.querySelector('#more-time');
-        setEventListeners(lessTime, moreTime);
-
+        changeTimer(lessTime, moreTime);
 };
 
-function setEventListeners (lessTime, moreTime) {
+function changeTimer (lessTime, moreTime) {
      lessTime = document.querySelector('#less-time')
      moreTime = document.querySelector('#more-time')
     lessTime.addEventListener('click', () => {
