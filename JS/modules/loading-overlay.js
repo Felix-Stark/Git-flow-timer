@@ -1,16 +1,17 @@
-const bodyElem = document.querySelector('body');
+import { showSetTime } from "./set-time.js";
 
-function showLoadingOverlay () {
-    bodyElem.innerHTML = `
+const mainElem = document.querySelector('main');
+
+export function showLoadingOverlay () {
+    mainElem.innerHTML = `
     <section class="loading-overlay">
         <img src="/assets/logo.svg" alt="logo">
         <h3>For all your timing needs</h3>
-    </section>
-    `;
+    </section>`;
 }
 
-function hideLoadingOverlay () {
-    /* insert main html here*/
+export function hideLoadingOverlay () {
+    showSetTime();
 }
 
-export {showLoadingOverlay, hideLoadingOverlay};
+setTimeout(() => {hideLoadingOverlay();}, 2000);

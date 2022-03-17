@@ -7,19 +7,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="CSS/style.css">
-    <title>Mighty Gardeners</title>
+    <title>Mighty Gardeners - interval app</title>
 </head>
 <body>
     <div class="wrapper">
         <header class="menu__bar">
             <nav>
-                <span class="menu__btn material-icons material-icons-outlined" id="open-menu">
-                    menu
-                </span>
+                <img src="/assets/navicon.svg" alt="logo" class="menu__btn" id="open-menu" >
+                <p class="interval-text">interval</p>
                 <section class="menu__overlay" id="menu">
-                    <span class="menu__btn menu--open material-icons material-icons-outlined" id="close-menu">
-                        menu
-                    </span>
+                    <img src="/assets/navicon.svg" alt="logo" class="menu__btn menu--open" id="close-menu">
+
                     <ul class="menu__list">  
                         <li class="menu__item" id="analog">Analaog timer</li>
                         <li class="menu__item" id="digital">Digital timer</li>
@@ -31,33 +29,11 @@
             </nav>
         </header>
         <main>
-            <section class="set__time" id="set-time">
-                <span class="less-time material-icons material-icons-outlined" id="less-time">
-                    arrow_back_ios
-                </span>
-                <section class="choose-time">
-                    <p class="interval-time" id="time">10</p>
-                    <p class="minutes">minutes</p>
-                </section>
-                <span class="more-time material-icons material-icons-outlined" id="more-time">
-                    arrow_forward_ios
-                </span>
-            </section>
-            <section class="set-interval">
-                <div>
-                    <input type="checkbox" name="intervals" id="intervals">
-                    <label for="intervals">intervals</label>
-                </div>
-                <div>
-                    <input type="checkbox" name="break/interval" id="break">
-                    <label for="break">5 min break / interval</label>
-                </div>
-            </section>
-            <button class="start-timer" id="start-btn">START TIMER</button>
+            
         </main>
     </div>
-    <script src="JS/modules/set-time.js"></script>
-    <script src="JS/modules/analouge-overlay.js"></script>
+    <!-- <script src="JS/modules/set-time.js"></script>
+    <script src="JS/modules/analouge-overlay.js"></script> -->
     <script type="module" src="JS/script.js"></script>
 </body>
 </html>
