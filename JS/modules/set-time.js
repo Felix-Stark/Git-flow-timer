@@ -4,8 +4,6 @@ import { activateStartTimerButton } from "../script.js";
 // import easyTimer from "./easyTimer.js";
 
 const mainElem = document.querySelector('main')
-const time = document.querySelector('#time')
-
 
 let setTime = 10;
 
@@ -44,7 +42,6 @@ export function showSetTime() {
 };
 
 
-
 function changeTimer (lessTime, moreTime) {
     lessTime = document.querySelector('#less-time');
     moreTime = document.querySelector('#more-time');
@@ -57,8 +54,3 @@ function changeTimer (lessTime, moreTime) {
         showSetTime();
     });
 }
-
-// {/* <div class="timerInfo">
-//                     <h1 id="minutes">00</h1>
-//                     <h1 id="seconds">00</h1>
-//                 </div> */}
