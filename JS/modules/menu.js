@@ -7,6 +7,7 @@ const menuElem = document.querySelector('#menu');
 
 import { showDigitalClock } from "./digital.js";
 import { addClockToHTML } from "./analouge-overlay.js";
+import { timer } from "./timer-function.js"
 
 export function showMenuOptions () {
     analougeTimerElem.addEventListener('click', () => {
@@ -18,8 +19,9 @@ export function showMenuOptions () {
 
     digitalTimerElem.addEventListener('click', () => {
         console.log('den digitala');
-        showDigitalClock();
         menuElem.classList.remove('show');
+        showDigitalClock(timer);
+        
  
     });
     
