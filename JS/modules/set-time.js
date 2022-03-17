@@ -1,11 +1,13 @@
+// import { activateStartTimerButton } from "./timer-function.js";
 import { activateStartTimerButton } from "../script.js";
+
+// import easyTimer from "./easyTimer.js";
 
 const mainElem = document.querySelector('main')
 const time = document.querySelector('#time')
 
-let setTime = 10;
 
-showSetTime();
+let setTime = 10;
 
 export function showSetTime() {
     mainElem.innerHTML = `
@@ -17,6 +19,7 @@ export function showSetTime() {
                 <p class="interval-time" id="time">${setTime}</p>
                 <p class="minutes">minutes</p>
             </section>
+             
             <span class="more-time material-icons material-icons-outlined" id="more-time">
                 arrow_forward_ios
             </span>
@@ -34,13 +37,17 @@ export function showSetTime() {
         <button class="start-timer" id="start-btn">Start timer</button> `;
         let lessTime = document.querySelector('#less-time');
         let moreTime = document.querySelector('#more-time');
+        
         changeTimer(lessTime, moreTime);
         activateStartTimerButton(setTime);
+        
 };
 
+
+
 function changeTimer (lessTime, moreTime) {
-     lessTime = document.querySelector('#less-time')
-     moreTime = document.querySelector('#more-time')
+    lessTime = document.querySelector('#less-time');
+    moreTime = document.querySelector('#more-time');
     lessTime.addEventListener('click', () => {
         setTime = setTime - 1;
         showSetTime();
@@ -49,6 +56,9 @@ function changeTimer (lessTime, moreTime) {
         setTime = setTime + 1;
         showSetTime();
     });
-    
 }
 
+// {/* <div class="timerInfo">
+//                     <h1 id="minutes">00</h1>
+//                     <h1 id="seconds">00</h1>
+//                 </div> */}
