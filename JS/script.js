@@ -2,10 +2,15 @@
 import { showLoadingOverlay } from "./modules/loading-overlay.js";
 import { showMenuOptions } from "./modules/menu.js";
 import { digitalClock } from "./modules/digital.js";
+import { showAlarm } from "./modules/alarm.js";
 
 const menuElem = document.querySelector('#menu');
 const openMenu = document.querySelector('#open-menu');
 const closeMenu = document.querySelector('#close-menu');
+
+
+
+
 
 
 showLoadingOverlay();
@@ -47,8 +52,10 @@ Den behöver*/
         console.log('times up');
         clearInterval(timer);
         //anropa en times-up overlay
+        showAlarm();
        }
     }, 1000);
 }
 
 /* En stop timer kanske? */
+
