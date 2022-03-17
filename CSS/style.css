@@ -88,6 +88,10 @@ label, h1, h2, h3, p {
     font-weight: 700;
 }
 
+.interval-text {
+    letter-spacing: 0.1em;
+}
+
 
 /* SET TIME */
 .set__time {
@@ -189,9 +193,9 @@ label, h1, h2, h3, p {
 
 
 /* DIGITAL TIMER */
-.digital-timer {
-    font-size: 3rem;
-    display: flex;
+
+.timerInfo {
+    font-size: 2.5rem;
 }
 .abort-btn {
     text-transform: uppercase;
@@ -219,11 +223,9 @@ label, h1, h2, h3, p {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: absolute;
+    position: fixed;
     top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+
 
 }
 .alarm-overlay h3 {

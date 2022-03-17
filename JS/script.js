@@ -26,7 +26,7 @@ closeMenu.addEventListener('click', ()=> {
     menuElem.classList.toggle('show');
 });
 
-export function activateStartTimerButton (setTime){    
+export function activateStartTimerButton(setTime){    
     const startBtn = document.querySelector('#start-btn');
    
     /* Fixa så att man inte kan starta timern om den redan är aktiv. Det fuckar upp */

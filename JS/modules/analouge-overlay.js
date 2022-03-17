@@ -1,7 +1,7 @@
 const mainElem = document.querySelector('main');
 
 
-export function addClockToHTML () {
+export function addClockToHTML() {
     mainElem.innerHTML = `
     <main class="flex column">
         <div class="clock">

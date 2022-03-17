@@ -1,11 +1,15 @@
 // import { activateStartTimerButton } from "./timer-function.js";
 import { activateStartTimerButton } from "../script.js";
 
+export { intervalBox, breakBox }
+
 // import easyTimer from "./easyTimer.js";
 
 const mainElem = document.querySelector('main')
 
 let setTime = 10;
+let intervalBox = false;
+let breakBox = false;
 
 export function showSetTime() {
     mainElem.innerHTML = `
@@ -35,6 +39,29 @@ export function showSetTime() {
         <button class="start-timer" id="start-btn">Start timer</button> `;
         let lessTime = document.querySelector('#less-time');
         let moreTime = document.querySelector('#more-time');
+
+        intervalBox = document.querySelector('#intervals');
+        breakBox = document.querySelector('#break');
+
+        intervalBox.addEventListener('click', () => {
+            console.log(intervalBox)
+            if(intervalBox.checked) {
+                intervalBox = true;
+            } else {
+                intervalBox = false;
+            }
+        })
+
+        breakBox.addEventListener('click', () => {
+            if(breakBox.checked) {
+                breakBox = true;
+            } else {
+                breakBox = false;
+            }
+        })
+
+
+
         
         changeTimer(lessTime, moreTime);
         activateStartTimerButton(setTime);
