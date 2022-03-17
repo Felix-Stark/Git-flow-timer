@@ -21,7 +21,6 @@ export function showDigitalClock(timer, timeLeft) {
 
     const abortBtn = document.querySelector('.abort-btn');
     abortBtn.addEventListener('click', () => {
-        console.log("hello");
         timer.stop();
         showSetTime();
     })
