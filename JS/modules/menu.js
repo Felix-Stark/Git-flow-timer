@@ -5,7 +5,7 @@ const textTimerElem = document.querySelector('#text');
 const circlesTimerElem = document.querySelector('#circles');
 const menuElem = document.querySelector('#menu');
 
-import { digitalClock } from "../modules/digital.js"
+import { showDigitalClock } from "./digital.js";
 import { addClockToHTML } from "./analouge-overlay.js";
 
 export function showMenuOptions () {
@@ -18,7 +18,7 @@ export function showMenuOptions () {
 
     digitalTimerElem.addEventListener('click', () => {
         console.log('den digitala');
-        digitalClock();
+        showDigitalClock();
         menuElem.classList.remove('show');
  
     });
@@ -36,6 +36,3 @@ export function showMenuOptions () {
         console.log('cirkel-timern')
     });
 }
-
-
-
