@@ -4,6 +4,7 @@ import { activateStartTimerButton } from "../script.js";
 // import easyTimer from "./easyTimer.js";
 
 const mainElem = document.querySelector('main')
+const time = document.querySelector('#time')
 
 
 let setTime = 10;
