@@ -167,56 +167,6 @@ main {
     }
 }
 
-/* ANALOG TIMER */
-.clock {
-    width: 500px;
-    height: 500px;
-    border-radius: 100%;
-    background-image: url(/assets/minutes.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-}
-
-.dot {
-    height: 20px;
-    width: 20px;
-    background-color: #555;
-    /* border: 3px solid #000; */
-    outline: 7px solid #000;
-    border-radius: 100%;
-    z-index: 3;
-}
-
-.second {
-    width: 5px;
-    height: 200px;
-    position: absolute;
-    background-color: #555;
-    bottom: 50%;
-    border-radius: 20%;
-    transform-origin: 50% 100%;
-    animation: sec 60s steps(60, end) infinite;
-}
-.minute {
-    width: 7px;
-    height: 200px;
-    position: absolute;
-    background-color: #000;
-    bottom: 50%;
-    border-radius: 20%;
-    animation: sec 3600s steps(60, end) infinite;
-    transform-origin: 50% 100%;
-}
-
-@keyframes sec {
-    100% {
-        transform: rotate(360deg);
-    }
-}
 
 /* DIGITAL TIMER */
 
