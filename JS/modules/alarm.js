@@ -1,6 +1,10 @@
-import { showSetTime } from "./set-time";
+import { showSetTime } from "../modules/set-time.js";
 
 const mainElem = document.querySelector('main');
+
+
+
+
 
 
 export function showAlarm () {
@@ -14,5 +18,13 @@ export function showAlarm () {
         <h3>Times up!</h3>
         <button class="button new-timer-btn">set new timer</button>
     </section>`;
+
+ 
+    // Knapp för att sätta nytt larm
+    const setNewTimerButton = document.querySelector('.new-timer-btn')
+    setNewTimerButton.addEventListener('click', () => {
+        showSetTime()
+    })
 }
+
 

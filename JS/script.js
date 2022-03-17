@@ -8,7 +8,9 @@ const menuElem = document.querySelector('#menu');
 const openMenu = document.querySelector('#open-menu');
 const closeMenu = document.querySelector('#close-menu');
 
-const setNewTimerButton = document.querySelector('.new-timer-btn')
+
+
+
 
 
 showLoadingOverlay();
@@ -57,7 +59,3 @@ Den behöver*/
 
 /* En stop timer kanske? */
 
-// Knapp för att sätta nytt larm
-setNewTimerButton.addEventListener('click', () => {
-    showSetTime()
-})
