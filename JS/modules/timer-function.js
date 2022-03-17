@@ -1,16 +1,20 @@
 import { showDigitalClock } from "./digital.js";
 
+var timer = new Timer();
+
 export function startTimer(setTime){
     
-    var timer = new Timer();
-        showDigitalClock(timer, setTime);
+    
         
-        timer.start({countdown: true, startValues: {minutes: setTime}});
+    timer.start({countdown: true, startValues: {minutes: setTime}});
+    console.log(timer.getTimeValues());
+ 
+;   timer.addEventListener('targetAchieved', function (e) {
+        /* function to times up view*/
         
-        
-        
-
-        timer.addEventListener('targetAchieved', function (e) {
-           /* function to times up */
-        });
+    });
+    
+    showDigitalClock(timer);
 }
+
+export {timer};
