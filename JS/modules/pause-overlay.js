@@ -13,7 +13,7 @@ const unPauseBtn = document.querySelector('.unpause-btn')
 const pauseTime = document.querySelector('#pause-time') //tiden när man trycker på pause
 
 
-function showPauseOverlay() {
+export function showPauseOverlay() {
     mainElem.innerHTML = `
     <section class="pause-overlay">
                 <div class="ring ring-one"></div>

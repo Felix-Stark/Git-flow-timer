@@ -60,12 +60,8 @@ export function showSetTime() {
             }
         })
 
-
-
-        
         changeTimer(lessTime, moreTime);
-        activateStartTimerButton(setTime);
-        
+        activateStartTimerButton(setTime);        
 };
 
 
