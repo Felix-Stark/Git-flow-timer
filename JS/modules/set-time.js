@@ -1,9 +1,9 @@
 // import { activateStartTimerButton } from "./timer-function.js";
 import { activateStartTimerButton } from "../script.js";
 
-export { intervalBox, breakBox }
+export { intervalBox, breakBox, setTime, breakCheckedBox }
 
-// import easyTimer from "./easyTimer.js";
+
 
 const mainElem = document.querySelector('main')
 

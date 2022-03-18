@@ -215,7 +215,7 @@ label, h1, h2, h3, p {
 
 
 /* ALARM VIEW */
-.alarm-overlay {
+.alarm-overlay, .pause-overlay{
     height: 100%;
     width: 100%;
     background-color: #000;
@@ -228,13 +228,13 @@ label, h1, h2, h3, p {
 
 
 }
-.alarm-overlay h3 {
+.alarm-overlay h3, .pause-overlay h3 {
     font-size: 2.3rem;
     color: #FFF;
     font-weight: 700;
 }
 
-.new-timer-btn {
+.new-timer-btn, .unpause-btn {
     transform: translateY(130px);
     background: black;
     color: rgb(175, 175, 175);

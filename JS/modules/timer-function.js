@@ -1,27 +1,31 @@
 import { showAlarm } from "./alarm.js";
 import { showDigitalClock } from "./digital.js";
 import { intervalBox, breakBox } from "./set-time.js";
+import { showPauseOverlay } from "./pause-overlay.js";
 
 var timer;
 
 export function startTimer(setTime){
     timer = new Timer();
-    
+   
         
-    timer.start({countdown: true, startValues: {minutes: setTime}});
+    timer.start({countdown: true, startValues: {seconds: setTime}});
     console.log(timer.getTimeValues());
-    console.log(intervalBox)
+
  
-;   timer.addEventListener('targetAchieved', function (e) {
+   timer.addEventListener('targetAchieved', function (e) {
     if(intervalBox.checked == true) {
         timer.stop();
         startTimer(setTime);
     } else if (breakBox.checked == true) {
         timer.stop();
-        //paus-overlay med 5min timer nånstans här
-        setTimeout(() => {
-            startTimer(setTime)
-        }, 50000); //<--ska vara 5 min. Nu är den 5 :)
+        showPauseOverlay()
+        //paus-overlay FUNKTION med 5min timer nånstans här
+        // startPauseTimer();
+
+        // setTimeout(() => {
+        //     startTimer(setTime)
+        // }, 50000); //<--ska vara 5 min. Nu är den 5 :)
     }
         /* function to times up view*/
        else {
@@ -33,4 +37,4 @@ export function startTimer(setTime){
     showDigitalClock(timer);
 }
 
-export {timer};
+export { timer };
