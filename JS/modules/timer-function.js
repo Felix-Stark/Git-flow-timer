@@ -13,10 +13,10 @@ export function startTimer(setTime){
     console.log(intervalBox)
  
 ;   timer.addEventListener('targetAchieved', function (e) {
-    if(intervalBox == true) {
+    if(intervalBox.checked == true) {
         timer.stop();
         startTimer(setTime);
-    } else if (breakBox == true) {
+    } else if (breakBox.checked == true) {
         timer.stop();
         //paus-overlay med 5min timer nånstans här
         setTimeout(() => {

@@ -48,7 +48,6 @@ export function showSetTime() {
 
         intervalBox.addEventListener('click', () => {
             if(intervalBox.checked) {
-                intervalBox = true;
                 intervalCheckedBox = 'checked';
                 if(breakBox.checked) {
                     breakCheckedBox = false;
@@ -61,7 +60,6 @@ export function showSetTime() {
 
         breakBox.addEventListener('click', () => {
             if(breakBox.checked) {
-                breakBox = true;
                 breakCheckedBox = 'checked';
                 if(intervalBox.checked) {
                     intervalCheckedBox = false;
