@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="CSS/pause.css">
+    <title>Mighty Gardeners - interval app</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="menu__bar">
+            <nav>
+                <img src="/assets/navicon.svg" alt="logo" class="menu__btn" id="open-menu" >
+                <p class="interval-text">interval</p>
+                <section class="menu__overlay" id="menu">
+                    <img src="/assets/navicon.svg" alt="logo" class="menu__btn menu--open" id="close-menu">
+
+                    <ul class="menu__list">  
+                        <li class="menu__item" id="analog">Analaog timer</li>
+                        <li class="menu__item" id="digital">Digital timer</li>
+                        <li class="menu__item" id="visual">Visual timer</li>
+                        <li class="menu__item" id="text">Text timer</li>
+                        <li class="menu__item" id="circles">Circles timer</li>
+                    </ul>
+                </section>
+            </nav>
+        </header>
+        <main>
+            <section class="pause-overlay">
+                <div class="ring ring-one"></div>
+                <div class="ring ring-two"></div>
+                <div class="ring ring-three"></div>
+                <div class="ring ring-four"></div>
+                <img src="/assets/pause-icon.png" alt="pause-icon">
+                <h3>Pause & breathe</h3>
+                <p id="pause-time"></p>
+                <button class="button unpause-btn">NO PAUSE, GO NOW!</button>
+            </section>
+        </main>
+    </div>
+    <script type="module" src="JS/pause-overlay.js"></script>
+</body>
+</html>
