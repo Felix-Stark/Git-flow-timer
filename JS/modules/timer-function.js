@@ -21,7 +21,7 @@ export function startTimer(setTime){
         //paus-overlay med 5min timer nånstans här
         setTimeout(() => {
             startTimer(setTime)
-        }, 10000); //<--ska vara 5 min
+        }, 50000); //<--ska vara 5 min. Nu är den 5 :)
     }
         /* function to times up view*/
        else {
