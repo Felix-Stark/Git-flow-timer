@@ -11,6 +11,9 @@ let setTime = 10;
 let intervalBox = false;
 let breakBox = false;
 
+let intervalCheckedBox = false;
+let breakCheckedBox = false;
+
 export function showSetTime() {
     mainElem.innerHTML = `
         <section class="set__time" id="set-time">
@@ -28,11 +31,11 @@ export function showSetTime() {
         </section>
         <section class="set-interval">
             <div>
-                <input type="checkbox" name="intervals" id="intervals">
+                <input type="checkbox" name="intervals" id="intervals" class="checkbox" ${intervalCheckedBox}>
                 <label for="intervals">intervals</label>
             </div>
             <div>
-                <input type="checkbox" name="break/interval" id="break">
+                <input type="checkbox" name="break/interval" id="break" class="checkbox" ${breakCheckedBox}>
                 <label for="break">5 min break / interval</label>
             </div>
         </section>
@@ -44,24 +47,30 @@ export function showSetTime() {
         breakBox = document.querySelector('#break');
 
         intervalBox.addEventListener('click', () => {
-            console.log(intervalBox)
             if(intervalBox.checked) {
                 intervalBox = true;
+                intervalCheckedBox = 'checked';
+                if(breakBox.checked) {
+                    breakCheckedBox = false;
+                }
             } else {
-                intervalBox = false;
+                intervalCheckedBox = false;
             }
+            showSetTime()
         })
 
         breakBox.addEventListener('click', () => {
             if(breakBox.checked) {
                 breakBox = true;
+                breakCheckedBox = 'checked';
+                if(intervalBox.checked) {
+                    intervalCheckedBox = false;
+                }
             } else {
-                breakBox = false;
+                breakCheckedBox = false;
             }
+            showSetTime()
         })
-
-
-
         
         changeTimer(lessTime, moreTime);
         activateStartTimerButton(setTime);
@@ -73,7 +82,11 @@ function changeTimer (lessTime, moreTime) {
     lessTime = document.querySelector('#less-time');
     moreTime = document.querySelector('#more-time');
     lessTime.addEventListener('click', () => {
-        setTime = setTime - 1;
+        if(setTime > 1) {
+            setTime = setTime - 1;
+        } else {
+            return setTime;
+        }
         showSetTime();
     });
     moreTime.addEventListener('click', () => {
@@ -81,3 +94,4 @@ function changeTimer (lessTime, moreTime) {
         showSetTime();
     });
 }
+
